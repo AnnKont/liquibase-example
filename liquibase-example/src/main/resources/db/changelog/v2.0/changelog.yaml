@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1638651367559-2
+      author: kontsann (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: first_name
+                  type: varchar(255)
+            tableName: person
+  - changeSet:
+      id: 1638651367559-3
+      author: kontsann (generated)
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: second_name
+                  type: varchar(255)
+            tableName: person
+  - changeSet:
+      id: 1638651367559-4
+      author: kontsann (generated)
+      changes:
+        - dropColumn:
+            columnName: name
+            tableName: person
+  - changeSet:
+      id: 1638651367559-1
+      author: kontsann (generated)
+      changes:
+        - addNotNullConstraint:
+            columnDataType: varchar(255)
+            columnName: name
+            tableName: animal
+            validate: true

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: liquibase-example
+  datasource:
+    url: jdbc:postgresql://localhost:5432/testDb
+    username: test
+    password: test
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect

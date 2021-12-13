@@ -1,0 +1,4 @@
+rootProject.name = 'liquibase-example-project'
+include 'liquibase-example'
+
+
