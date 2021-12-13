@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.3.1.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+}
+ext {
+    database = new Properties().with {
+        load(file("db.properties").newReader())
+        it
+    }
+}
+
+allprojects {
+    group = 'ru.ann.kont'
+    version '1.0-SNAPSHOT'
+
+
+    apply plugin: "java"
+    apply plugin: "org.springframework.boot"
+    apply plugin: "io.spring.dependency-management"
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation 'org.projectlombok:lombok:1.18.10'
+        implementation "org.springframework.boot:spring-boot-starter-data-jpa:2.2.5.RELEASE"
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
+
